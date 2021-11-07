@@ -18,6 +18,7 @@ Plug 'HerringtonDarkholme/yats.vim'             " more syntax coloring for types
 Plug 'voldikss/vim-floaterm'                    " terminal in vim with F12
 Plug 'tpope/vim-fugitive'                       " git integration
 Plug 'vim-airline/vim-airline'                  " specifies branch at bottom
+Plug 'mhinz/vim-signify'                        " add signs for changes in file
 
 " Configure ccls for C++ integration
 " coc-emmet - React
@@ -25,7 +26,8 @@ Plug 'vim-airline/vim-airline'                  " specifies branch at bottom
 " coc-vimlsp - Code completion, see coc-settings.json for supported languages
 " coc-tsserver - Provides features for Typescript/Javascript
 " coc-tslint - Typescript/Javascript linting
-let g:coc_global_extensions = ['coc-python', 'coc-java', 'coc-tsserver', 'coc-tslint', 'coc-vimlsp', 'coc-prettier', 'coc-emmet', 'coc-sh', 'coc-json']
+" coc-pyright for python3, coc-python for python version <3
+let g:coc_global_extensions = ['coc-pyright', 'coc-java', 'coc-tsserver', 'coc-tslint', 'coc-vimlsp', 'coc-prettier', 'coc-emmet', 'coc-sh', 'coc-json']
 
 call plug#end()
 
