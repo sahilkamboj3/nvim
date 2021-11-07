@@ -8,23 +8,36 @@ filetype off 	 				                " required
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'morhetz/gruvbox'				            " colorscheme
-Plug 'tpope/vim-fugitive'			            " git integration
 Plug 'preservim/nerdtree'			            " folder tree display
 Plug 'ctrlpvim/ctrlp.vim'			            " search files with Control-p
 Plug 'Raimondi/delimitMate'                     " bracket completion
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " code completion - python, json, java
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " code completion
 Plug 'ianks/vim-tsx'                            " syntax coloring for tsx files
 Plug 'leafgarland/typescript-vim'               " syntax coloring for typescript keywords
 Plug 'HerringtonDarkholme/yats.vim'             " more syntax coloring for typescript keywords
 Plug 'voldikss/vim-floaterm'                    " terminal in vim with F12
+Plug 'tpope/vim-fugitive'                       " git integration
+Plug 'vim-airline/vim-airline'                  " specifies branch at bottom
 
-let g:coc_global_extensions = ['coc-clangd', 'coc-sh', 'coc-json', 'coc-python', 'coc-java', 'coc-vimlsp', 'coc-prettier', 'coc-snippets', 'coc-tsserver', 'coc-emmet', 'coc-tslint']
+" Configure ccls for C++ integration
+" coc-emmet - React
+" coc-prettier - Code formatting
+" coc-vimlsp - Code completion, see coc-settings.json for supported languages
+" coc-tsserver - Provides features for Typescript/Javascript
+" coc-tslint - Typescript/Javascript linting
+let g:coc_global_extensions = ['coc-python', 'coc-java', 'coc-tsserver', 'coc-tslint', 'coc-vimlsp', 'coc-prettier', 'coc-emmet', 'coc-sh', 'coc-json']
 
 call plug#end()
 
 colorscheme gruvbox
 let g:mapleader = "\<Space>"
 map <silent> <leader>n :NERDTreeFocus<CR>
+
+" Copy to clipboard
+vnoremap  <leader>c  "+y
+
+" Paste from clipboard
+nnoremap <leader>p "+p
 
 " map terminal to F12
 let g:floaterm_keymap_toggle = '<F12>'
@@ -55,32 +68,6 @@ nnoremap <S-K> <C-W>k
 nnoremap <S-L> <C-W>l
 nnoremap <S-H> <C-W>h
 
-" commenting and uncommenting
-function! Comment()
-  let ext = tolower(expand('%:e'))
-  if ext == 'php' || ext == 'rb' || ext == 'sh' || ext == 'py'
-    silent s/^/\#/
-  elseif ext == 'js' || ext == 'ts' || ext == 'tsx' || ext == 'jsx'
-    silent s:^:\/\/:g
-  elseif ext == 'vim'
-    silent s:^:\":g
-  endif
-endfunction
-
-function! Uncomment()
-  let ext = tolower(expand('%:e'))
-  if ext == 'php' || ext == 'rb' || ext == 'sh' || ext == 'py'
-    silent s/^\#//
-  elseif ext == 'js' || ext == 'ts' || ext == 'tsx' || ext == 'jsx'
-    silent s:^\/\/::g
-  elseif ext == 'vim'
-    silent s:^\"::g
-  endif
-endfunction
-
-map <S-C> :call Comment()<CR>
-map <S-U> :call Uncomment()<CR>
-
 " tabbing
 nnoremap <Tab> >>_
 nnoremap <S-Tab> <<_
@@ -90,9 +77,9 @@ vnoremap <S-Tab> <gv
 
 filetype plugin indent on 			            " required
 syntax on
+highlight ColorColumn ctermbg=0 guibg=lightgrey
 set background=dark
 set hidden
-highlight ColorColumn ctermbg=0 guibg=lightgrey
 set noswapfile
 set scrolloff=7
 set ruler
