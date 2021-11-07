@@ -35,6 +35,11 @@ colorscheme gruvbox
 let g:mapleader = "\<Space>"
 map <silent> <leader>n :NERDTreeFocus<CR>
 
+" vim-signify overrides
+let g:signify_sign_add    = '+'
+let g:signify_sign_delete = '-'
+let g:signify_sign_change = '~'
+
 " Copy to clipboard
 vnoremap  <leader>c  "+y
 
@@ -101,3 +106,4 @@ set fileformat=unix
 set title
 set selection=inclusive
 set selection=inclusive
+
