@@ -1,0 +1,15 @@
+clang++
+%cpp -std=c++11
+-I
+../include
+../vendor/include
+-stdlib=libc++
+-fPIC
+
+# Mac setup if ccls cannot find default libraries
+# Run 'clang -v -fsyntax-only -x c++ /dev/null' to get directoies and add 'isystem' in front
+-isystem/usr/local/include
+-isystem/Library/Developer/CommandLineTools/usr/include/c++/v1
+-isystem/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include
+-isystem/Library/Developer/CommandLineTools/usr/include
+-isystem/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include

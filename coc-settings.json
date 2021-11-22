@@ -55,5 +55,6 @@
   "typescript.preferences.quoteStyle": "single",
   "coc.preferences.snippets.enable": true,
   "diagnostic.messageTarget": "float",
-  "suggest.floatEnable": true
+  "suggest.floatEnable": true,
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd"
 }
