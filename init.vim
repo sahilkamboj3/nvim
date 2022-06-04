@@ -8,6 +8,8 @@ filetype off 	 				                " required
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'morhetz/gruvbox'				            " colorscheme
+Plug 'cocopon/iceberg.vim'                      " light colorscheme
+
 Plug 'preservim/nerdtree'			            " folder tree display
 Plug 'ctrlpvim/ctrlp.vim'			            " search files with Control-p
 Plug 'Raimondi/delimitMate'                     " bracket completion
@@ -31,7 +33,9 @@ let g:coc_global_extensions = ['coc-pyright', 'coc-java', 'coc-tsserver', 'coc-t
 
 call plug#end()
 
-colorscheme gruvbox
+colorscheme gruvbox " pair with dark background
+" colorscheme iceberg " pair with light background
+
 let g:mapleader = "\<Space>"
 map <silent> <leader>n :NERDTreeFocus<CR>
 
@@ -85,7 +89,7 @@ vnoremap <S-Tab> <gv
 filetype plugin indent on 			            " required
 syntax on
 highlight ColorColumn ctermbg=0 guibg=lightgrey
-set background=dark
+set background=dark " light
 set hidden
 set noswapfile
 set scrolloff=7
@@ -106,4 +110,5 @@ set fileformat=unix
 set title
 set selection=inclusive
 set selection=inclusive
+
 
