@@ -1,7 +1,7 @@
 # Prequisites
 1. Have a `~/.config/` directory
-2. Have `yarn` installed
-3. Install `node` globally
+2. Have `yarn` installed with `sudo apt install yarn` or `brew install yarn`
+3. Install `node` globally with `yarn install -g node`
 4. Have `python3` installed
 
 # Setup instructions
