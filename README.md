@@ -1,8 +1,9 @@
 # Prequisites
 1. Have a `~/.config/` directory
-2. Have `yarn` installed with `sudo apt install yarn` or `brew install yarn`
-3. Install `node` globally with `yarn install -g node`
-4. Have `python3` installed
+2. Have `python3` installed
+3. Have `npm` installed with `sudo apt install npm` or `brew install npm`
+4. Have `yarn` installed with `sudo apt install yarn` or `brew install yarn`
+5. Install `node` globally with `npm install -g node` or `[sudo apt/brew] install nodejs`
 
 # Setup instructions
 Note: Instructions will only work for Unix-based system (ie. Linux, Mac, etc.)
