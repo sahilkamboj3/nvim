@@ -1,8 +1,13 @@
 {
   "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "filetypes": ["go"],
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"]
+    },
     "ccls": {
       "command": "ccls",
-      "filetypes": ["c", "cpp", "objc", "objcpp"],
+      "filetypes": ["c", "cpp", "cxx", "inl", "objc", "objcpp", "h", "hpp"],
       "rootPatterns": [
         ".ccls",
         "compile_commands.json",
@@ -24,6 +29,7 @@
     "hpp",
     "python",
     "java",
+    "go",
     "javascript",
     "typescript",
     "javascriptreact",
