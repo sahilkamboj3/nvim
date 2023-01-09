@@ -17,12 +17,13 @@ Plug 'preservim/tagbar' " https://github.com/preservim/tagbar [browse files and 
 Plug 'neoclide/coc.nvim', { 'branch': 'release' } " https://github.com/neoclide/coc.nvim [code completion]
 Plug 'Raimondi/delimitMate' " https://github.com/Raimondi/delimitMate [bracket completion]
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' } " https://github.com/fatih/vim-go [go]
+Plug 'xiyaowong/nvim-transparent'
 
 call plug#end()
 
 " colorscheme and transparency in background
 :colorscheme gruvbox
-" highlight Normal ctermbg=NONE guibg=NONE 
+highlight Normal ctermbg=NONE guibg=NONE 
 
 " coc-nvim installations
 let g:coc_global_extensions = ['coc-pyright', 'coc-prettier', 'coc-vimlsp']
