@@ -1,3 +1,4 @@
+Note: Instructions will only work for Unix-based system (ie. Linux, Mac, etc.)
 # Prequisites
 1. Have a `~/.config/` directory
 2. Have `python3` installed
@@ -6,9 +7,9 @@
 5. Install `node` globally with `npm install -g node` or `[sudo apt/brew] install nodejs`
 
 # Setup instructions
-Note: Instructions will only work for Unix-based system (ie. Linux, Mac, etc.)
 
 1. Run `git clone https://github.com/sahilkamboj3/nvim` into the `~/.config/` directory
+2. `cd nvim` to go into `nvim` directory
 2. Install neovim with `sudo apt install neovim` or `brew install neovim` [run `nvim` to ensure properly installed]
 3. Open init.vim with `nvim init.vim`
 4. In visual mode, run `:PlugInstall`
