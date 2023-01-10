@@ -12,6 +12,7 @@ call plug#begin()
 
 Plug 'rafi/awesome-vim-colorschemes' " https://github.com/rafi/awesome-vim-colorschemes [colorschemes]
 Plug 'vim-airline/vim-airline' " https://github.com/vim-airline/vim-airline [adds status line at the bottom]
+Plug 'mhinz/vim-signify' " https://github.com/mhinz/vim-signify [Show git diff in a sign column]
 Plug 'preservim/nerdtree' " https://github.com/preservim/nerdtree [file browser]
 Plug 'tpope/vim-commentary' " https://github.com/tpope/vim-commentary [comment in files]
 Plug 'preservim/tagbar' " https://github.com/preservim/tagbar [browse files and directory structures]
