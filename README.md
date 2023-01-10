@@ -17,4 +17,4 @@ Note: Instructions will only work for Unix-based system (ie. Linux, Mac, etc.)
 8. Open `init.vim` again and in visual mode, run `:CocInstall` 
 9. For any languages you want supported, install their language servers (ie. for C/C++ - ccls, for Go - gopls) and add to `coc-settings.json`. C/C++ and Go supported in `coc-settings.json` currently
 
-Optional: Add `alias vim='nvim'` into `~/.bash_profile` or `~/.bash_rc` to open neovim using the `vim` command
+Optional: Add `alias vim='nvim'` in `~/.bash_profile` or `~/.bash_rc` to open neovim using the `vim` command
