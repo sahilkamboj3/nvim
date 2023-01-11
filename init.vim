@@ -61,4 +61,9 @@ nnoremap <S-H> <C-W>h
 " vim-go overrides
 let g:go_def_mapping_enabled = 0
 
+" vim-signify overrides
+let g:signify_sign_add = "+"
+let g:signify_sign_delete = "-"
+let g:signify_sign_change = "~"
+
 
