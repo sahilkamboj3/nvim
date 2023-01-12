@@ -19,7 +19,7 @@ Plug 'preservim/tagbar' " https://github.com/preservim/tagbar [browse files and 
 Plug 'neoclide/coc.nvim', { 'branch': 'release' } " https://github.com/neoclide/coc.nvim [code completion]
 Plug 'Raimondi/delimitMate' " https://github.com/Raimondi/delimitMate [bracket completion]
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' } " https://github.com/fatih/vim-go [go]
-Plug 'xiyaowong/nvim-transparent'
+Plug 'voldikss/vim-floaterm' " https://github.com/voldikss/vim-floaterm [floating terminal]
 
 call plug#end()
 
@@ -66,4 +66,8 @@ let g:signify_sign_add = "+"
 let g:signify_sign_delete = "-"
 let g:signify_sign_change = "~"
 
+" float-term overrides
+let g:floaterm_keymap_toggle = '<F12>'
+let g:floaterm_width = 0.9
+let g:floaterm_height = 0.9
 
